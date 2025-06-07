@@ -9,18 +9,13 @@ class Solution {
         int i = 0;
         int j = 0;
 
-        int cnt = 0;
-
-        while(i<n && j<m){
-            if(s[j]>=g[i]){
-                cnt++;
-                i++;
-                j++;
-            }else{
+        while(i<m && j<n){
+            if(g[j]<=s[i]){
                 j++;
             }
+            i++;
         }
 
-        return cnt;
+        return j;
     }
 }
