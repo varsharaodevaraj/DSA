@@ -14,10 +14,11 @@ class Tree {
     // Return a list containing the Preorder traversal of the given tree
     ArrayList<Integer> preOrder(Node root) {
         // Code
+        Stack<Node> st = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
+        
         if(root==null) return list;
         
-        Stack<Node> st = new Stack<>();
         st.push(root);
         
         while(!st.isEmpty()){
@@ -27,10 +28,8 @@ class Tree {
             
             if(root.right!=null) st.push(root.right);
             if(root.left!=null) st.push(root.left);
-            
         }
         
         return list;
-        
     }
 }
