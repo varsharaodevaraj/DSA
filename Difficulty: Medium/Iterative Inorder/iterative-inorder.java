@@ -14,10 +14,9 @@ class Solution {
     // Return a list containing the inorder traversal of the given tree
     ArrayList<Integer> inOrder(Node root) {
         // Code
-        ArrayList<Integer> list = new ArrayList<>();
-        if(root==null) return list;
-        
         Stack<Node> st = new Stack<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        
         Node curr = root;
         
         while(curr!=null || !st.isEmpty()){
