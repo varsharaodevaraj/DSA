@@ -17,14 +17,14 @@ class Solution {
 
     int ind = 0;  // index tracking the current element in preorder
 
-    public TreeNode find(int[] preorder,int mx, int n) {
+    public TreeNode find(int[] preorder, int mn, int mx, int n) {
 
-        if (ind >= n || preorder[ind] >= mx) {
+        if (ind >= n || preorder[ind] <= mn || preorder[ind] >= mx) {
             return null;
         }
         TreeNode root = new TreeNode(preorder[ind++]);
-        root.left = find(preorder, root.val, n);
-        root.right = find(preorder, mx, n);
+        root.left = find(preorder, mn, root.val, n);
+        root.right = find(preorder, root.val, mx, n);
         return root;
 
     }
@@ -33,8 +33,8 @@ class Solution {
 
         ind = 0;
         int n = preorder.length;
-        return find(preorder, Integer.MAX_VALUE, n);
-
+        return find(preorder, Integer.MIN_VALUE, Integer.MAX_VALUE, n);
+        
     }
 
 }
