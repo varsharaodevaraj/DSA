@@ -7,7 +7,5 @@ This repository contains solutions to Data Structures and Algorithms problems so
 
 ## Purpose:
 - Track my progress and improve problem-solving skills
-  
-Feel free to explore and connect!
 
-Happy Coding:)
+  Happy Coding:)
