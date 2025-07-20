@@ -21,7 +21,7 @@ class Solution {
             
             Node temp = new Node(arr[i]);
             mover.next = temp;
-            mover = mover.next;
+            mover = temp;
             
         }
         
